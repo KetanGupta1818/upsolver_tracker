@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <title>Upsolving Tracker</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+    <div id="index-navigation">
+        <div class="ui menu">
+            <div class="item">Home</div>
+            <div class="item">About</div>
+            <div class="item">Services</div>
+            <div class="item">Portfolio</div>
+            <div class="item">Contact</div>
+            <div class="item">
+                <form class="ui form" action="/api/v1/problems" method="post">
+                    <div class="inline field">
+                      <label>CodeForces Id</label>
+                      <input type="text" name="codeForces_id">
+                    </div>
+                    <button class="ui button" type="submit" style="font-size: 0.7em;">Submit</button>
+
+                  </form>
+            </div>
+            <div class="item">
+                <div class="ui fluid category search">
+                    <div class="ui icon input">
+                      <input class="prompt" type="text" placeholder="CodeForces Id">
+                      <i class="search icon"></i>
+                    </div>
+                    <div class="results"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui container">
+        <table class="ui collapsing table" id="problems-table">
+            <thead>
+              <tr>
+                <th>Contest</th>
+                <th>Problems</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+          </table>          
+    </div>
+     <!-- axios -->
+     <script
+     src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+     integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer"
+   ></script>
+    <script src="browser.js"></script>
+</body>
+</html>
